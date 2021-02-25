@@ -1,2 +1,2 @@
 # hackerrank
-hackerrank interesting problems
+some problems from hackerrank that are interesting
