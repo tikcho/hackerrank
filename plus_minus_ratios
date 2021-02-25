@@ -1,0 +1,32 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Given an array of integers, calculate the ratios of its elements that are positive, negative, and zero. 
+# Print the decimal value of each fraction on a new line with 6 places after the decimal.
+
+def plusMinus(arr):
+    elements_count = {'-':0, '+':0, '0':0,}
+    for element in arr:
+        if element < 0: key = '-'
+        elif element > 0: key = '+'
+        else: key = '0'
+        elements_count[key] += 1
+
+    l = len(arr)
+    # proportion of positive values
+    print(round(elements_count['+']/l, 6))    
+    # proportion of negative values
+    print(round(elements_count['-']/l, 6))        
+    # proportion of zeros
+    print(round(elements_count['0']/l, 6))    
+
+    
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().rstrip().split()))
+    plusMinus(arr)
